@@ -1,0 +1,21 @@
+<style>
+.section {display: none; }
+.active { dsiplay: block; }
+
+<nav> 
+<a href="#" onclick="showSection('home'); return false;">Home</a>
+<a href="#" onclick="showSection('opinions'); return false;>"About</a>
+</nav>
+
+<div id="home" class="section active">
+<h2> Home </h2>
+<div id="opinions" class="section"
+<h2> opinions </h2>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
